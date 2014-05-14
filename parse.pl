@@ -1,4 +1,6 @@
 
+#Log parsing Perl Script Please change the value of $LOGFILE with the name of log file
+
 #$LOGFILE = "localhost_access_log.2014-05-13.txt";
 $LOGFILE = "access.log";
 open(LOGFILE) or die("Could not open log file.");
@@ -13,3 +15,4 @@ foreach $line (<LOGFILE>) {
 	print "IP : $site --- Request : $req --- Status : $status --- Date : $date\n";
 }
 close(LOGFILE);
+
